@@ -44,7 +44,7 @@ export default {};
 <style scoped>
 .search-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .search-input {
   width: 100%;
@@ -52,6 +52,6 @@ export default {};
 .search-domain,
 .search-input,
 .search-btn {
-  padding: 15px;
+  padding: 10px;
 }
 </style>

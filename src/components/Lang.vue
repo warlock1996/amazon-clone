@@ -1,5 +1,5 @@
 <template>
-  <div class="lang-wrapper" @click="showDropDown = !showDropDown">
+  <div class="lang-wrapper" @click="showDropDown = !showDropDown" @mouseenter="showDropDown = true" @mouseleave="showDropDown = false">
     <img src="@/assets/images/usa-flag.png" alt="flag" width="25" height="20" />
     <icon icon="caret-down" style="color: grey; margin-left: 5px"/>
     <drop-down :visible="showDropDown">

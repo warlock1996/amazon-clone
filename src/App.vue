@@ -18,8 +18,12 @@ export default {
 </script>
 
 <style>
-  body {
-    margin: 0;
-
-  }
+@font-face {
+  font-family: Ember;
+  src: url("./assets/fonts/Amazon-Ember-Regular.ttf");
+}
+body {
+  margin: 0;
+  font-family: Ember;
+}
 </style>

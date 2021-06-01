@@ -1,10 +1,15 @@
 <template>
-  <div class="accounts-wrapper" @mouseover="showDropDown = true">
-    <span class="line-1">Hello, Sign in</span>
-    <span class="line-2"
-      ><b>Account & lists</b>
-      <icon icon="caret-down" style="color: grey; margin-left: 5px" />
-    </span>
+  <div
+    class="accounts-wrapper"
+    @click="showDropDown = !showDropDown"
+    @mouseenter="showDropDown = true"
+    @mouseleave="showDropDown = false"
+  >
+    <nav-text text1="Hello, Sign in" text2="Account & lists">
+      <template #suffix-icon>
+        <icon icon="caret-down" style="color: grey; margin-left: 5px" />
+      </template>
+    </nav-text>
     <drop-down :visible="showDropDown">
       <div class="account-card">
         <div class="account-card-item">
@@ -42,9 +47,11 @@
 
 <script>
 import DropDown from "@/components/DropDown";
+import NavText from "@/components/NavText";
 export default {
   components: {
     DropDown,
+    NavText,
   },
   data() {
     return {
@@ -76,14 +83,6 @@ export default {
   color: white;
   position: relative;
 }
-.accounts-wrapper .line-1 {
-  font-size: 14px;
-  display: block;
-}
-.accounts-wrapper .line-2 {
-  font-size: 16px;
-  display: block;
-}
 .account-card {
   color: black;
   display: flex;
@@ -99,6 +98,10 @@ export default {
   border-radius: 3px 3px 3px 3px;
   line-height: 30px;
   width: 100%;
+}
+.amazon-button:hover {
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, #f6da95, #ecb21f);
 }
 .account-card-item {
   border-bottom: 1px solid #eee;
