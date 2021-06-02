@@ -1,9 +1,9 @@
 <template>
   <div class="lang-wrapper" @click="showDropDown = !showDropDown" @mouseenter="showDropDown = true" @mouseleave="showDropDown = false">
     <img src="@/assets/images/usa-flag.png" alt="flag" width="25" height="20" />
-    <icon icon="caret-down" style="color: grey; margin-left: 5px"/>
+    <icon icon="caret-down" class="caret-down-icon"/>
     <drop-down :visible="showDropDown">
-      <p>Change Language <small>Learn More</small></p>
+      <p>Change Language <small class="primary-clr">Learn More</small></p>
       <div
         class="lang-iterator"
         v-for="(l, i) in langs"
@@ -22,8 +22,8 @@
         <label :for="l.lang"> {{ l.label }}</label>
       </div>
       <hr />
-      <p>Change Currency <small>Learn More</small></p>
-      <p>$ - USD - U.S. Dollar <small>Change Currency</small></p>
+      <p>Change Currency <small class="primary-clr">Learn More</small></p>
+      <p>$ - USD - U.S. Dollar <small class="primary-clr">Change Currency</small></p>
       <hr />
       <p>
         <img
@@ -67,13 +67,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import "@/assets/scss/_variables.scss";
+@import "@/assets/scss/global.scss";
+
 .lang-wrapper {
   cursor: pointer;
   position: relative;
+  color: $link-inactive-clr;
+  font-size: 13px;
 }
 .lang-iterator:hover {
   text-decoration: underline;
-  color: #e47911;
+  color: $link-active-clr;
 }
 </style>

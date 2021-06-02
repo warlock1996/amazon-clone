@@ -17,10 +17,15 @@
         <icon icon="map-marker-alt" />
       </template>
     </nav-text>
-    <Search class="nav-item" />
+    <Search class="nav-item grow" />
     <Lang class="nav-item" />
     <Account class="nav-item" />
     <nav-text class="nav-item" text1="Returns" text2="& Orders" />
+    <nav-text class="nav-item" text2="Cart">
+      <template #prefix-icon>
+        <icon icon="shopping-cart" class="cart-icon" />
+      </template>
+    </nav-text>
   </nav>
 </template>
 
@@ -38,22 +43,24 @@ export default {
   },
 };
 </script>
-<style scoped>
+
+<style lang="scss" scoped>
+@import "@/assets/scss/_variables.scss";
+
 nav {
+  background-color: $navbar-bg;
+  color: $navbar-clr;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  background: black;
-}
-.nav-item {
-  padding: 10px;
-}
-</style>
-
-
-<style lang="scss" scoped>
- @use '@/assets/scss/_variables.scss' as v;
-  nav {
-    // background: slate;
+  .nav-item {
+    padding: 10px;
+    .cart-icon {
+      font-size: 30px;
+    }
+    &.grow {
+      flex-grow: 1;
+    }
   }
+}
 </style>

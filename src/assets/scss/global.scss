@@ -1,0 +1,33 @@
+@import "./variables";
+
+.primary-clr {
+  color: $primary-clr;
+}
+.link-inactive-clr {
+  color: $link-inactive-clr;
+}
+.link-active-clr {
+  color: $link-active-clr;
+}
+
+a {
+  @extend .link-inactive-clr;
+}
+a:hover {
+  @extend .link-active-clr;
+}
+.caret-down-icon {
+  margin-left: 5px;
+  color: $nav-icon-clr;
+}
+.amazon-button {
+  border: 1px solid;
+  border-color: #c89411 #b0820f #99710d;
+  box-shadow: inset 0 1px 0 0 #fcf3dc;
+  background: #f3cf72;
+  border-radius: 3px 3px 3px 3px;
+}
+.amazon-button:hover {
+  cursor: pointer;
+  background: -webkit-linear-gradient(top, #f6da95, #ecb21f);
+}
