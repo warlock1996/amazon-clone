@@ -1,7 +1,7 @@
 <template>
   <div v-show="visible" class="dropdown-wrapper">
     <slot class="dropdown-content"></slot>
-    <div class="backdrop" v-show="visible"></div>
+    <div class="backdrop" v-if="visible"></div>
   </div>
 </template>
 

@@ -1,6 +1,7 @@
 <template>
   <header>
     <nav-bar></nav-bar>
+    <secondary-nav-bar></secondary-nav-bar>
   </header>
   <main>
     <router-view />
@@ -10,9 +11,12 @@
 
 <script>
 import NavBar from "@/components/NavBar";
+import SecondaryNavBar from "@/components/SecondaryNavBar";
+
 export default {
   components: {
     NavBar,
+    SecondaryNavBar,
   },
 };
 </script>

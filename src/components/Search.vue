@@ -73,7 +73,7 @@ export default {};
     padding: 10px;
   }
   .search-domain {
-    background-color: $nav-bar-select-bg;
+    background-color: $navbar-select-bg;
     border-radius: 4px 0px 0px 4px;
   }
   .search-input {
