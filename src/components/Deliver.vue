@@ -1,17 +1,13 @@
 <template>
-  <div class="deliver-wrapper">
+  <div class="deliver-wrapper pointer">
     <icon icon="map-marker-alt" />
     Deliver to
     <div>Pakistan</div>
   </div>
 </template>
 
-<script>
-export default {
-};
-</script>
+<style  lang="scss" scoped>
 
-<style scoped>
 .deliver-wrapper {
   color: #ffffff;
   text-align: center;

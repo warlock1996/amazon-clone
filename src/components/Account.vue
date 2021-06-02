@@ -58,7 +58,7 @@ export default {
   },
   data() {
     return {
-      showDropDown: true,
+      showDropDown: false,
       yourListLinks: [
         { label: "Create a List" },
         { label: "Find a List or Registry" },

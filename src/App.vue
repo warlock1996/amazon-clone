@@ -17,7 +17,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+
+@import "@/assets/scss/global.scss";
+
 @font-face {
   font-family: Ember;
   src: url("./assets/fonts/Amazon-Ember-Regular.ttf");

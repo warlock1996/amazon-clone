@@ -16,6 +16,10 @@ a {
 a:hover {
   @extend .link-active-clr;
 }
+
+.pointer {
+  cursor: pointer;
+}
 .caret-down-icon {
   margin-left: 5px;
   color: $nav-icon-clr;
@@ -30,4 +34,15 @@ a:hover {
 .amazon-button:hover {
   cursor: pointer;
   background: -webkit-linear-gradient(top, #f6da95, #ecb21f);
+}
+
+.backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: -10;
 }

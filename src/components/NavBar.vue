@@ -46,6 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_variables.scss";
+@import "@/assets/scss/global.scss";
 
 nav {
   background-color: $navbar-bg;
@@ -55,6 +56,7 @@ nav {
   align-items: flex-end;
   .nav-item {
     padding: 10px;
+    cursor: pointer;
     .cart-icon {
       font-size: 30px;
     }
