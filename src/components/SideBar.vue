@@ -37,6 +37,9 @@ export default {
     color: $navbar-clr;
   }
 }
+.backdrop {
+      z-index: 100;
+  } 
 .slidein-enter-from,
 .slidein-leave-to {
   transform: translateX(-250px);

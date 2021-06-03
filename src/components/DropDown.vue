@@ -30,5 +30,8 @@ export default {
     border-right-color: transparent;
     border-left-color: transparent;
   }
+  .backdrop {
+      z-index: -50;
+  }
 }
 </style>

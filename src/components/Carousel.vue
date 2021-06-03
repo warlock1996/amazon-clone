@@ -62,6 +62,7 @@ export default {
 .carousel-wrapper {
   div {
     position: relative;
+    z-index: -100;
   }
 }
 .slidein-enter-from,
