@@ -7,6 +7,7 @@
     <router-view />
   </main>
   <footer>
+    <back-to-top></back-to-top>
     <site-map />
   </footer>
 </template>
@@ -15,12 +16,14 @@
 import NavBar from "@/components/NavBar";
 import SecondaryNavBar from "@/components/SecondaryNavBar";
 import SiteMap from "./components/SiteMap.vue";
+import BackToTop from "./components/BackToTop.vue";
 
 export default {
   components: {
     NavBar,
     SecondaryNavBar,
     SiteMap,
+    BackToTop
   },
 };
 </script>

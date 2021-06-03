@@ -62,9 +62,6 @@ export default {
 .carousel-wrapper {
   div {
     position: relative;
-    img {
-      // position: absolute;
-    }
   }
 }
 .slidein-enter-from,
@@ -78,8 +75,10 @@ export default {
 
 .products-grid-wrapper {
   position: absolute;
+  display: block;
   bottom: 300px;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fill, 350px);
   gap: 15px;
   grid-auto-rows: auto;
