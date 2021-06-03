@@ -1,16 +1,14 @@
 <template>
   <div class="carousel-wrapper">
-    <ul>
-      <li v-for="n in 5" :key="n">
-        <transition name="slidein">
-          <img
-            v-show="slide == n"
-            :src="require(`@/assets/images/Fuji_TallHero (${n}).jpg`)"
-            alt="slide_image"
-          />
-        </transition>
-      </li>
-    </ul>
+    <div v-for="n in 5" :key="n">
+      <transition name="slidein">
+        <img
+          v-show="slide == n"
+          :src="require(`@/assets/images/Fuji_TallHero (${n}).jpg`)"
+          alt="slide_image"
+        />
+      </transition>
+    </div>
     <div class="products-grid-wrapper">
       <template v-for="(n, i) in products" :key="i">
         <product-card :heading="n.heading" :show-link="n.link">
@@ -47,12 +45,12 @@ export default {
     };
   },
   mounted() {
-    this.slideInterval = setInterval(() => {
-      if (this.slide === 5) {
-        this.slide = 0;
-      }
-      this.slide++;
-    }, this.speed);
+    // this.slideInterval = setInterval(() => {
+    //   if (this.slide === 5) {
+    //     this.slide = 0;
+    //   }
+    //   this.slide++;
+    // }, this.speed);
   },
   beforeUnmount() {
     clearInterval(this.slideInterval);
@@ -62,17 +60,10 @@ export default {
 
 <style lang="scss" scoped>
 .carousel-wrapper {
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      position: relative;
-      display: inline;
-      img {
-        position: absolute;
-        max-width: 100vw;
-      }
+  div {
+    position: relative;
+    img {
+      // position: absolute;
     }
   }
 }
@@ -87,9 +78,9 @@ export default {
 
 .products-grid-wrapper {
   position: absolute;
-  top: 60%;
+  bottom: 300px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, 350px);
   gap: 15px;
   grid-auto-rows: auto;
   img {
