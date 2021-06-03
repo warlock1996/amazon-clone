@@ -6,24 +6,28 @@
   <main>
     <router-view />
   </main>
-  <footer></footer>
+  <footer>
+    <site-map />
+  </footer>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar";
 import SecondaryNavBar from "@/components/SecondaryNavBar";
+import SiteMap from "./components/SiteMap.vue";
 
 export default {
   components: {
     NavBar,
     SecondaryNavBar,
+    SiteMap,
   },
 };
 </script>
 
 <style lang="scss">
-
 @import "@/assets/scss/global.scss";
+@import "@/assets/scss/_variables.scss";
 
 @font-face {
   font-family: Ember;
@@ -32,5 +36,14 @@ export default {
 body {
   margin: 0;
   font-family: Ember;
+  background: hsl(180, 8%, 92%);
+  #app {
+    display: flex;
+    flex-direction: column;
+    main {
+      max-width: 1500px;
+      flex-grow: 1;
+    }
+  }
 }
 </style>

@@ -22,7 +22,7 @@
         <template v-for="(m, i) in sideBarMenu" :key="i">
           <div class="sidebar-vmenu-wrapper__heading">{{ m.text }}</div>
           <ul v-if="m.children.length">
-            <li v-for="(cm, ci) in m.children" :key="ci">
+            <li v-for="(cm, ci) in m.children" :key="ci" @click="showSideBar = false">
               <span>{{ cm.text }}</span>
               <icon icon="chevron-right" />
             </li>
